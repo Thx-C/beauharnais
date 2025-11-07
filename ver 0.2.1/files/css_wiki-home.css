@@ -1,0 +1,26 @@
+/* style boutons*/
+#b5 {
+	float: left;
+}
+#b4 {
+	margin: 0 auto;
+}
+#b3 {
+	float: right;
+}
+
+
+.b-style {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #A9A9A9;
+  border-radius: 7px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 150px;
+  cursor: pointer;
+  margin: 5px;
+}
