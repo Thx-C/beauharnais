@@ -36,18 +36,16 @@
                 <div class="link-card" onclick="openLink('discord')">
                     <h3>💬 Discord</h3>
                     <p>Serveur communautaire</p>
-                    <input type="text" id="discord-link" class="link-input" placeholder="Collez le lien Discord ici">
                 </div>
 
                 <div class="link-card" onclick="openLink('roblox')">
                     <h3>🎮 Roblox</h3>
                     <p>Groupe officiel</p>
-                    <input type="text" id="roblox-link" class="link-input" placeholder="Collez le lien Roblox ici">
                 </div>
             </div>
 
             <div style="margin-top: 2rem; padding: 1rem; background: #f5f9f5; border-radius: 5px;">
-                <p style="font-size: 0.9rem; color: #5a8a5a;"><strong>Note :</strong> Cliquez sur une carte pour ajouter un lien. Les liens seront stockés localement dans votre navigateur.</p>
+                <p style="font-size: 0.9rem; color: #5a8a5a;"><strong>Note :</strong> Cliquez sur une carte pour accéder à la plateforme.</p>
             </div>
         </div>
     </div>
@@ -71,7 +69,11 @@
 </footer>
 
 <script>
-    const links = {};
+    const links = {
+        'discord': 'https://discord.gg/fBgqEFQqp9',
+        'roblox': 'https://www.roblox.com/fr/communities/35649122/House-of-the-Beauharnais#!/about'
+    };
+
     let lastScrollTop = 0;
     const header = document.getElementById('header');
 
