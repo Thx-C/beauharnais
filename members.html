@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="files/css_main.css">
+</head>
+<body>
+<header id="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">B</div>
+            <div class="site-title">MAISON BEAUHARNAIS</div>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="nav">
+            <button class="nav-link" onclick="window.location='index.html'; showPage('accueil')">Accueil</button>
+            <button class="nav-link" onclick="window.location='family.html'">Famille</button>
+            <button class="nav-link active" onclick="window.location=''">Cabinet</button>
+            <button class="nav-link" onclick="window.location='wiki/home.html'">Wiki</button>
+            <button class="nav-link" onclick="window.location='links.html'">Liens</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Page Membres Notables -->
+    <div id="membres" class="page active">
+        <div class="card">
+            <h2>Membres Notables</h2>
+            <p>Les personnalités éminentes qui ont marqué l'histoire de la Maison Beauharnais.</p>
+        </div>
+
+        <!-- Section Prince Étienne -->
+        <div class="member-section">
+            <div class="member-header">
+                <div class="member-image">👑</div>
+                <div class="member-info">
+                    <div class="member-title">Prince</div>
+                    <div class="member-name">Étienne de Beauharnais</div>
+                    <div class="member-subtitle">Chef de la Maison Beauharnais</div>
+                </div>
+            </div>
+            <div class="member-content">
+                <p>Le Prince Étienne de Beauharnais incarne les valeurs d'excellence et de tradition qui caractérisent la Maison depuis des générations. À la tête de la famille, il perpétue l'héritage prestigieux de ses ancêtres tout en guidant la famille vers l'avenir.</p>
+                <p><em>Emplacement réservé pour l'image et les détails biographiques du Prince Étienne.</em></p>
+            </div>
+        </div>
+
+        <!-- Section Duc Redy -->
+        <div class="member-section">
+            <div class="member-header">
+                <div class="member-image">🎖️</div>
+                <div class="member-info">
+                    <div class="member-title">Duc</div>
+                    <div class="member-name">Redy De Beauharnais</div>
+                    <div class="member-subtitle">Gardien des traditions</div>
+                </div>
+            </div>
+            <div class="member-content">
+                <p>Le Duc Redy De Beauharnais est reconnu pour son dévouement à la préservation du patrimoine familial et son engagement au service de la Maison. Sa sagesse et son expérience font de lui un pilier essentiel de la famille.</p>
+                <p><em>Emplacement réservé pour l'image et les détails biographiques du Duc Redy.</em></p>
+            </div>
+        </div>
+
+        <!-- Section Comte Blue -->
+        <div class="member-section">
+            <div class="member-header">
+                <div class="member-image">⚜️</div>
+                <div class="member-info">
+                    <div class="member-title">Comte</div>
+                    <div class="member-name">Blue De Beauharnais</div>
+                    <div class="member-subtitle">Représentant de la nouvelle génération</div>
+                </div>
+            </div>
+            <div class="member-content">
+                <p>Le Comte Blue De Beauharnais représente l'avenir de la Maison. Alliant respect des traditions et vision moderne, il incarne la continuité de l'excellence qui caractérise la famille Beauharnais.</p>
+                <p><em>Emplacement réservé pour l'image et les détails biographiques du Comte Blue.</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-section">
+            <div class="footer-logo">B</div>
+            <div class="footer-title">Maison Beauharnais</div>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                💬 Discord
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Maison Beauharnais - Tous droits réservés</p>
+    </div>
+</footer>
+
+<script>
+    const links = {};
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        const buttons = document.querySelectorAll('.nav-link');
+
+        pages.forEach(page => page.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(pageId).classList.add('active');
+
+        buttons.forEach(btn => {
+            if (btn.textContent.toLowerCase().includes(pageId) ||
+                (pageId === 'accueil' && btn.textContent === 'Accueil')) {
+                btn.classList.add('active');
+            }
+        });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const nav = document.getElementById('nav');
+        if (window.innerWidth <= 768) {
+            nav.classList.remove('open');
+        }
+    }
+
+    function toggleMenu() {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('open');
+    }
+
+    function openLink(platform) {
+        const linkInput = document.getElementById(platform + '-link');
+
+        if (links[platform]) {
+            window.open(links[platform], '_blank');
+        } else {
+            if (linkInput.style.display === 'none' || linkInput.style.display === '') {
+                linkInput.style.display = 'block';
+                linkInput.focus();
+                linkInput.onblur = function() {
+                    if (this.value) {
+                        links[platform] = this.value;
+                        alert('Lien enregistré ! Cliquez à nouveau pour l\'ouvrir.');
+                    }
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                    }, 100);
+                };
+                linkInput.onkeypress = function(e) {
+                    if (e.key === 'Enter') {
+                        if (this.value) {
+                            links[platform] = this.value;
+                            alert('Lien enregistré ! Cliquez à nouveau pour l\'ouvrir.');
+                        }
+                        this.style.display = 'none';
+                    }
+                };
+            }
+        }
+    }
+
+    function openFooterLink(platform) {
+        if (links[platform]) {
+            window.open(links[platform], '_blank');
+        } else {
+            alert('Veuillez d\'abord configurer le lien Discord dans la page Liens.');
+        }
+    }
+
+    window.addEventListener('resize', () => {
+        const nav = document.getElementById('nav');
+        if (window.innerWidth > 768) {
+            nav.classList.remove('open');
+        }
+    });
+</script>
+</body>
+</html>

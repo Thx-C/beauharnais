@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="../imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="../files/css_main.css">
+    <link rel="stylesheet" href="../files/css_wiki-home.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">B</div>
+            <div class="site-title">MAISON BEAUHARNAIS</div>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="nav">
+            <button class="nav-link" onclick="window.location='../index.html'; showPage('accueil')">Accueil</button>
+            <button class="nav-link" onclick="window.location='../family.html'">Famille</button>
+            <button class="nav-link" onclick="window.location='../members.html'">Cabinet</button>
+            <button class="nav-link active" onclick="window.location='home.html'">Wiki</button>
+            <button class="nav-link" onclick="window.location='../links.html'">Liens</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Page Wiki -->
+    <div id="wiki" class="page active">
+        <div class="card">
+            <h2>Blue de Beauharnais</h2>
+            <p><em>Capitaine de la Garde</em><p>
+
+            <h3>Titres</h3>
+            <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
+
+            <h3>Biographie</h3>
+            <p>Aenean non sagittis nunc. Ut eget neque ultrices dui pharetra hendrerit eget id dolor. Sed porttitor mauris at velit iaculis ultrices. Vivamus ex leo, rutrum tristique maximus vitae, scelerisque at augue. Ut ipsum neque, blandit vel mauris in, porttitor vulputate lectus. Aliquam ullamcorper ornare nunc vel sodales. Phasellus laoreet, sapien quis efficitur fringilla, magna lorem efficitur sapien, nec auctor ante elit et eros. Vestibulum luctus rhoncus tellus. Vestibulum id finibus erat, at faucibus est. Cras ultrices justo eu elementum iaculis. Nulla pharetra sed velit nec bibendum. Aliquam eleifend lacus at fringilla finibus.</p>
+
+            <h3>Décorations</h3>
+            <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-section">
+            <div class="footer-logo">B</div>
+            <div class="footer-title">Maison Beauharnais</div>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                💬 Discord
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Maison Beauharnais - Tous droits réservés</p>
+    </div>
+</footer>
+
+<script>
+    const links = {};
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        const buttons = document.querySelectorAll('.nav-link');
+
+        pages.forEach(page => page.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(pageId).classList.add('active');
+
+        buttons.forEach(btn => {
+            if (btn.textContent.toLowerCase().includes(pageId) ||
+                (pageId === 'wiki' && btn.textContent === 'Wiki')) {
+                btn.classList.add('active');
+            }
+        });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const nav = document.getElementById('nav');
+        if (window.innerWidth <= 768) {
+            nav.classList.remove('open');
+        }
+    }
+
+    function toggleMenu() {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('open');
+    }
+
+    function openLink(platform) {
+        const linkInput = document.getElementById(platform + '-link');
+
+        if (links[platform]) {
+            window.open(links[platform], '_blank');
+        } else {
+            if (linkInput.style.display === 'none' || linkInput.style.display === '') {
+                linkInput.style.display = 'block';
+                linkInput.focus();
+                linkInput.onblur = function() {
+                    if (this.value) {
+                        links[platform] = this.value;
+                        alert('Lien enregistré ! Cliquez à nouveau pour l\'ouvrir.');
+                    }
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                    }, 100);
+                };
+                linkInput.onkeypress = function(e) {
+                    if (e.key === 'Enter') {
+                        if (this.value) {
+                            links[platform] = this.value;
+                            alert('Lien enregistré ! Cliquez à nouveau pour l\'ouvrir.');
+                        }
+                        this.style.display = 'none';
+                    }
+                };
+            }
+        }
+    }
+
+    function openFooterLink(platform) {
+        if (links[platform]) {
+            window.open(links[platform], '_blank');
+        } else {
+            alert('Veuillez d\'abord configurer le lien Discord dans la page Liens.');
+        }
+    }
+
+    window.addEventListener('resize', () => {
+        const nav = document.getElementById('nav');
+        if (window.innerWidth > 768) {
+            nav.classList.remove('open');
+        }
+    });
+</script>
+</body>
+</html>
