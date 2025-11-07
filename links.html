@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="files/css_main.css">
+</head>
+<body>
+<header id="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">B</div>
+            <div class="site-title">MAISON BEAUHARNAIS</div>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="nav">
+            <button class="nav-link" onclick="window.location='index.html'">Accueil</button>
+            <button class="nav-link" onclick="window.location='wiki/home.html'">Wiki</button>
+            <button class="nav-link" onclick="window.location='family.html'">Famille</button>
+            <button class="nav-link" onclick="window.location='members.html'">Membres Notables</button>
+            <button class="nav-link active" onclick="window.location=''; showPage('liens')">Liens</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Page Liens -->
+    <div id="liens" class="page">
+        <div class="card">
+            <h2>Liens & Ressources</h2>
+            <p>Rejoignez la communauté de la Maison Beauharnais sur nos différentes plateformes.</p>
+
+            <div class="link-grid">
+                <div class="link-card" onclick="openLink('discord')">
+                    <h3>💬 Discord</h3>
+                    <p>Serveur communautaire</p>
+                    <input type="text" id="discord-link" class="link-input" placeholder="Collez le lien Discord ici">
+                </div>
+
+                <div class="link-card" onclick="openLink('roblox')">
+                    <h3>🎮 Roblox</h3>
+                    <p>Groupe officiel</p>
+                    <input type="text" id="roblox-link" class="link-input" placeholder="Collez le lien Roblox ici">
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1rem; background: #f5f9f5; border-radius: 5px;">
+                <p style="font-size: 0.9rem; color: #5a8a5a;"><strong>Note :</strong> Cliquez sur une carte pour ajouter un lien. Les liens seront stockés localement dans votre navigateur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-section">
+            <div class="footer-logo">B</div>
+            <div class="footer-title">Maison Beauharnais</div>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                💬 Discord
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Maison Beauharnais - Tous droits réservés</p>
+    </div>
+</footer>
+
+<script>
+    const links = {};
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        const buttons = document.querySelectorAll('.nav-link');
+
+        pages.forEach(page => page.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(pageId).classList.add('active');
+
+        buttons.forEach(btn => {
+            if (btn.textContent.toLowerCase().includes(pageId) ||
+                (pageId === 'liens' && btn.textContent === 'Liens')) {
+                btn.classList.add('active');
+            }
+        });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const nav = document.getElementById('nav');
+        if (window.innerWidth <= 768) {
+            nav.classList.remove('open');
+        }
+    }
+
+    function toggleMenu() {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('open');
+    }
+
+    function openLink(platform) {
+        const linkInput = document.getElementById(platform + '-link');
+
+        if (links[platform]) {
+            window.open(links[platform], '_blank');
+        } else {
+            if (linkInput.style.display === 'none' || linkInput.style.display === '') {
+                linkInput.style.display = 'block';
+                linkInput.focus();
+                linkInput.onblur = function() {
+                    if (this.value) {
+                        links[platform] = this.value;
+                        alert('Lien enregistré ! Cliquez à nouveau pour l\'ouvrir.');
+                    }
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                    }, 100);
+                };
+                linkInput.onkeypress = function(e) {
+                    if (e.key === 'Enter') {
+                        if (this.value) {
+                            links[platform] = this.value;
+                            alert('Lien enregistré ! Cliquez à nouveau pour l\'ouvrir.');
+                        }
+                        this.style.display = 'none';
+                    }
+                };
+            }
+        }
+    }
+
+    function openFooterLink(platform) {
+        if (links[platform]) {
+            window.open(links[platform], '_blank');
+        } else {
+            alert('Veuillez d\'abord configurer le lien Discord dans la page Liens.');
+        }
+    }
+
+    window.addEventListener('resize', () => {
+        const nav = document.getElementById('nav');
+        if (window.innerWidth > 768) {
+            nav.classList.remove('open');
+        }
+    });
+</script>
+</body>
+</html>
