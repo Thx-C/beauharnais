@@ -1,2 +1,2 @@
 # beauharnais
-Sourcecode of the beauharnais.fr site.
+Sitemap of the beauharnais.fr site.
