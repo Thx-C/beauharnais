@@ -481,3 +481,11 @@
                 gap: 1rem;
             }
         }
+
+.liens{
+    text-decoration: none;
+    color: #256070;
+}
+.liens:hover {
+    color: blue;
+}
