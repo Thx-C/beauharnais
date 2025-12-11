@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="files/css_main.css">
+    <link rel="stylesheet" href="files/css_wiki-home.css">
+</head>
+<body>
+  
+   <header id="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">B</div>
+                <div class="site-title">MAISON BEAUHARNAIS</div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav id="nav">
+                <button class="nav-link" onclick="window.location='../index.html'">Accueil</button>
+                <button class="nav-link" onclick="window.location='../family.html'">Famille</button>
+                <button class="nav-link" onclick="window.location='../members.html'">Cabinet</button>
+                <button class="nav-link active" onclick="window.location=''">Wiki</button>
+                <button class="nav-link" onclick="window.location='../links.html'">Liens</button>
+                <button class="nav-link" onclick="window.location='en/wiki.html'">EN</button>
+            </nav>
+        </div>
+    </header>
+
+<div class="container">
+<!-- Page Wiki -->
+        <div id="wiki" class="page active">
+            <div class="card">
+                <h2>Wiki - Encyclopédie Familiale</h2>
+                
+                <h3>Histoire</h3>
+                <p>La Maison Beauharnais trouve ses origines dans la noblesse française. Au fil des siècles, elle a joué un rôle important dans l'histoire de France, particulièrement durant l'Empire napoléonien.</p>
+                
+                <h3>Héraldique</h3>
+                <p>Le blason de la Maison Beauharnais représente les valeurs et l'histoire de cette illustre famille. Ses couleurs et symboles témoignent de la richesse de son patrimoine.</p>
+
+                <h3>Patrimoine</h3>
+                <p>La Maison Beauharnais a laissé un héritage culturel et architectural significatif, avec plusieurs demeures et monuments associés à son histoire.</p>
+
+                <h3>Personnalités Historiques</h3>
+                <p style="margin-top: 1rem;">Si dessous, vous pouvez retrouver les nobles notables de la Famille.</p>
+
+                <h4 style="margin-top: 1rem;">Cabinet :</h4>
+                <p style="margin-top: 0.3rem;font-size: 80%;"><em>Si dessous sont les beauharnais composants le Cabinet de la Famille :</em></p>
+                <p style="margin-top: 0.5rem;">• Prince, <a class="liens" href="etienne">Etienne De Beauharnais</a></p>
+                <p style="margin-top: 0.3rem;">• Intendant, <a class="liens" href="redy">Redy De beauharnais</a></p>
+                <p style="margin-top: 0.3rem;">• Capitaine de la Garde, <a class="liens" href="blueyes">Blue De Beauharnais</a></p>
+
+                <h4 style="margin-top: 1rem;">Noblesse :</h4>
+                <p style="margin-top: 0.3rem;font-size: 80%;"><em>Voici les Beauharnais au dessus du titre de Compte :</em></p>
+
+                <h5 style="margin-top: 0.7rem;">Ducs :</h5>
+                <p style="margin-top: 0.1rem;">• Duc de Navarres, <a class="liens" href="redy">Redy De beauharnais</a></p>
+                <p style="margin-top: 0.3rem;">• Duc de Tasher, <a class="liens" href="ninja">Ninja De beauharnais</a></p>
+
+                <h5 style="margin-top: 0.7rem;">Comptes :</h5>
+                <p style="margin-top: 0.1rem;">• Compte de Tascher, <a class="liens" href="cour/sossola">Lee De Beauharnais</a></p>
+                <p style="margin-top: 0.3rem;">• Compte de Dijon, <a class="liens" href="cour/mimile">Emile De Beauharnais</a></p> <!--Mimile-->
+                <p style="margin-top: 0.3rem;">• Compte, <a class="liens" href="blueyes">Blue De Beauharnais</a></p>
+                <p style="margin-top: 0.3rem;">• Compte, <a class="liens" href="cour/kayz">Kays De Beauharnais</a></p>
+                <p style="margin-top: 0.3rem;">• Compte, <a class="liens" href="cour/labarof">Marco De Beauharnais</a></p> <!--Labarof-->
+
+                <h4 style="margin-top: 1rem;">Liste Complète :</h4>
+                <p style="margin-top: 0.1rem;">Vous pouvez retrouver la liste complète de nos membres à <a class="liens" href="wiki/nobles">ce liens</a>.</p>
+
+            </div>
+        </div>
+</div>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-logo-section">
+                <div class="footer-logo">B</div>
+                <div class="footer-title">Maison Beauharnais</div>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                    💬 Discord
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Maison Beauharnais - Tous droits réservés</p>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="../files/js_wiki.js"></script>
+
+</body> 
+</html>
