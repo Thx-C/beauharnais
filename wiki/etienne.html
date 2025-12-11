@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House of the Beauharnais</title>
+    <title>EtienneDeBeauharnais | Wiki | House of the Beauharnais</title>
     <link rel="icon" href="../imgs/logo.png" type="png"/>
     <link rel="stylesheet" href="../files/css_main.css">
     <link rel="stylesheet" href="../files/css_wiki-home.css">
@@ -31,8 +31,11 @@
     <!-- Page Wiki -->
     <div id="wiki" class="page active">
         <div class="card">
-            <h2>Etienne de Beauharnais</h2>
-            <p><em>Prince des Beauharnais</em><p>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;border-bottom: 2px solid #a8d5a8;margin-bottom: 1.5rem">
+                <h2 style="flex: 0 0 auto;border-bottom: none;margin-bottom:0px">Etienne de Beauharnais</h2>
+                <img src="../../imgs/logos/Prince.png" alt="Prince" style="height: auto; width: 3rem; margin-top: 0.3rem;" onclick="openModal(this.src)">
+            </div>
+            <p><em>Prince des Beauharnais</em>
 
             <h3>Titres</h3>
             <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
@@ -55,7 +58,21 @@
             <table class="decorations-table">
                 <thead>
                 <tr>
-                    <th>Médaille</th>
+                    <th>Ordres</th>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Athenmatique-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Légionnaire de l'ordre de l'Athenmatique</td>
+                    <td>20 Avril 2025</td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Médailles</th>
                     <th>Nom</th>
                     <th>Date</th>
                 </tr>
@@ -66,11 +83,6 @@
                     <td>Pendantif Bénévole, d'Argent</td>
                     <td>Argent - 20 Avril 2025
                     <br>Bronze - 17 Février 2025</td>
-                </tr>
-                <tr>
-                    <td class="medal-cell"><img src="../imgs/medals/Athenmatique-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
-                    <td>Légionnaire de l'ordre de l'Athenmatique</td>
-                    <td>20 Avril 2025</td>
                 </tr>
                 <tr>
                     <td class="medal-cell"><img src="../imgs/medals/Italie-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>

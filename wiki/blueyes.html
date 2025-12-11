@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House of the Beauharnais</title>
+    <title>Blueyes | Wiki | House of the Beauharnais</title>
     <link rel="icon" href="../imgs/logo.png" type="png"/>
     <link rel="stylesheet" href="../files/css_main.css">
     <link rel="stylesheet" href="../files/css_wiki-home.css">
@@ -31,8 +31,11 @@
     <!-- Page Wiki -->
     <div id="wiki" class="page active">
         <div class="card">
-            <h2>Blue de Beauharnais</h2>
-            <p><em>Capitaine de la Garde</em><p>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;border-bottom: 2px solid #a8d5a8;margin-bottom: 1.5rem">
+                <h2 style="flex: 0 0 auto;border-bottom: none;margin-bottom:0px">Blue De Beauharnais</h2>
+                <img src="../../imgs/logos/Compte.png" alt="Comte" style="height: auto; width: 3rem; margin-top: 0.1rem;" onclick="openModal(this.src)">
+            </div>
+            <p><em>Capitaine de la Garde & Compte de la Famille</em><p>
 
             <h3>Titres</h3>
             <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
@@ -41,7 +44,142 @@
             <p>Aenean non sagittis nunc. Ut eget neque ultrices dui pharetra hendrerit eget id dolor. Sed porttitor mauris at velit iaculis ultrices. Vivamus ex leo, rutrum tristique maximus vitae, scelerisque at augue. Ut ipsum neque, blandit vel mauris in, porttitor vulputate lectus. Aliquam ullamcorper ornare nunc vel sodales. Phasellus laoreet, sapien quis efficitur fringilla, magna lorem efficitur sapien, nec auctor ante elit et eros. Vestibulum luctus rhoncus tellus. Vestibulum id finibus erat, at faucibus est. Cras ultrices justo eu elementum iaculis. Nulla pharetra sed velit nec bibendum. Aliquam eleifend lacus at fringilla finibus.</p>
 
             <h3>Décorations</h3>
-            <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
+            <p>Ici, vous trouverez toutes les distinctions reçu par Redy tout au long de sa carrière sur NW.</p>
+            <br>
+
+            <div id="imageModal" class="modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modalImage" alt="Médaille en grand">
+            </div>
+
+
+            <h4>France</h4>
+
+            <table class="decorations-table">
+                <thead>
+                <tr>
+                    <th>Ordres</th>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Athenmatique-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Légionnaire de l'ordre de l'Athenmatique</td>
+                    <td>22 Novembre 2025</td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Médaille</th>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Militaire-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite militaire, de Bronze</td>
+                    <td>20 Avril 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Sociaux-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite Social</td>
+                    <td>12 Juillet 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Benevole-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Pendantif Bénévole, de Bronze</td>
+                    <td>12 Juillet 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Borodino-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille de la Campagne d'Allemagne, de Bronze</td>
+                    <td>Septembre 2025</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Carrière</h3>
+            <p>Dans cette secton, vous retrouverez toute la progression et les affectations de Blueyes.</p>
+            <br>
+            <h4>France</h4>
+
+            <table class="decorations-table">
+                <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Appelation</th>
+                    <th>Promotion</th>
+                    <th>Company</th>
+                    <th>Position</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sgt-M.png" alt="Sgt-M" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sergent Major</td>
+                    <td>22 Novembre 2025</td>
+                    <td>Fus-Spec</td>
+                    <td>NCO Troisième Section</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sgt.png" alt="Sgt" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sergent</td>
+                    <td>16 Août 2025</td>
+                    <td>Fus-Spec</td>
+                    <td>NCO Troisième Section</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Cpl-F.png" alt="Cpl-F" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Caporal Fourrier</td>
+                    <td>7 Avril 2025</td>
+                    <td>Fus-Spec</td>
+                    <td>Fourrier le 5 Mai
+                    <br>NCO le 14 Juillet
+                    <br>Ranker</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Cpl-P.png" alt="Cpl-P" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Caporal de Premier</td>
+                    <td>17 Mars 2025</td>
+                    <td>Fus-Spec</td>
+                    <td>Ranker</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Cpl.png" alt="Cpl" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Caporal</td>
+                    <td>10 Mars 2025</td>
+                    <td>Fus-Spec</td>
+                    <td>Ranker</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sdt-P.png" alt="Sdt-P" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Soldat de Premier</td>
+                    <td>3 Mars 2025</td>
+                    <td>Fus-Spec</td>
+                    <td>Ranker</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sdt.png" alt="Sdt" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Soldat</td>
+                    <td>27 Février 2025</td>
+                    <td>Fusiliers</td>
+                    <td>Ranker</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Cst.png" alt="Cst" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Conscrit</td>
+                    <td>24 Février 2025</td>
+                    <td>Fusiliers</td>
+                    <td>Ranker</td>
+                </tr>
+
+                </tbody>
+            </table>
+
         </div>
     </div>
 </div>

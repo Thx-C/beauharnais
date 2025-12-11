@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House of the Beauharnais</title>
+    <title>NinjaDeBeauharnais | Wiki | House of the Beauharnais</title>
     <link rel="icon" href="../imgs/logo.png" type="png"/>
     <link rel="stylesheet" href="../files/css_main.css">
     <link rel="stylesheet" href="../files/css_wiki-home.css">
@@ -31,7 +31,10 @@
     <!-- Page Wiki -->
     <div id="wiki" class="page active">
         <div class="card">
-            <h2>Ninja de Beauharnais</h2>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;border-bottom: 2px solid #a8d5a8;margin-bottom: 1.5rem">
+                <h2 style="flex: 0 0 auto;border-bottom: none;margin-bottom:0px">Ninja De Beauharnais</h2>
+                <img src="../imgs/logos/Tasher.png" alt="Tasher" style="height: 2rem; width: auto; margin-top: 0.1rem;" onclick="openModal(this.src)">
+            </div>
             <p><em>Duc de Tascher</em><p>
 
             <h3>Titres</h3>
@@ -41,7 +44,173 @@
             <p>Aenean non sagittis nunc. Ut eget neque ultrices dui pharetra hendrerit eget id dolor. Sed porttitor mauris at velit iaculis ultrices. Vivamus ex leo, rutrum tristique maximus vitae, scelerisque at augue. Ut ipsum neque, blandit vel mauris in, porttitor vulputate lectus. Aliquam ullamcorper ornare nunc vel sodales. Phasellus laoreet, sapien quis efficitur fringilla, magna lorem efficitur sapien, nec auctor ante elit et eros. Vestibulum luctus rhoncus tellus. Vestibulum id finibus erat, at faucibus est. Cras ultrices justo eu elementum iaculis. Nulla pharetra sed velit nec bibendum. Aliquam eleifend lacus at fringilla finibus.</p>
 
             <h3>Décorations</h3>
-            <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
+            <p>Ici, vous trouverez toutes les distinctions reçu par Redy tout au long de sa carrière sur NW.</p>
+            <br>
+
+            <div id="imageModal" class="modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modalImage" alt="Médaille en grand">
+            </div>
+
+
+            <h4>France</h4>
+
+            <table class="decorations-table">
+                <thead>
+                <tr>
+                    <th>Ordres</th>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Athenmatique-Commander.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Commandeur de l'ordre de l'Athenmatique</td>
+                    <td>Commandeur - 20 Avril 2025
+                        <br>Officier - 2 Juillet 2024
+                        <br>Légionnaire - 8 Septembre 2024</td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Médailles</th>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Militaire-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite militaire, d'Argent</td>
+                    <td>Argent - 3 Avril 2024
+                    <br>Bronze - 2024</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Aigle-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite Porte Aigle, d'Argent</td>
+                    <td>Argent - 17 Février 2025
+                    <br>Bronze - 7 Mai 2024</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Autriche-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille de la Campagne d'Autriche, de Bronze</td>
+                    <td>Été 2024</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Benevole-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Pendantif Bénévole, d'Argent</td>
+                    <td>Argent - 20 Avril 2025
+                    <br>Bronze - 2024</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Sociaux-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite Social</td>
+                    <td>23 Mars 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Italie-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille de la Campagne d'Italie, de Bronze</td>
+                    <td>Mai 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Borodino-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille de la Campagne d'Allemagne, de Bronze</td>
+                    <td>Septembre 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/medals/Bataille-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Croix de Bataille, d'Argent</td>
+                    <td>Argent - 28 Septembre 2025
+                    <br>Bronze - 2024</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Carrière</h3>
+            <p>Dans cette secton, vous retrouverez toute la progression et les affectations de RedyDeBeauharnais.</p>
+            <br>
+            <h4>France</h4>
+
+            <table class="decorations-table">
+                <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Appelation</th>
+                    <th>Promotion</th>
+                    <th>Regiment</th>
+                    <th>Company</th>
+                    <th>Position</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sgt-M.png" alt="Sgt-M" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sergent Major</td>
+                    <td>26 Octobre 2025</td>
+                    <td>112e</td>
+                    <td>Grenadier</td>
+                    <td>NCO</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sgt.png" alt="Sgt" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sergent</td>
+                    <td>28 Septembre 2025</td>
+                    <td>112e</td>
+                    <td>Grenadier</td>
+                    <td>NCO</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Cpl-F.png" alt="Cpl-F" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Caporal Fourrier</td>
+                    <td>20 Juin 2025</td>
+                    <td>112e</td>
+                    <td>Grenadier</td>
+                    <td>Ranker 112e</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/S-Lt.png" alt="S-Lt" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sous Lieutenant</td>
+                    <td>16 Juin 2025</td>
+                    <td>GMP</td>
+                    <td>Etat Major</td>
+                    <td>XO de la GMP</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Adj-S.png" alt="Adj-S" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Adjudant Sous Officer</td>
+                    <td>24 Février 2025</td>
+                    <td>GMP</td>
+                    <td>Etat Major</td>
+                    <td>XO de la GMP</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Adj.png" alt="Adj" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Adjudant</td>
+                    <td>27 Octobre 2024</td>
+                    <td>112e</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sgt-M.png" alt="Sgt-M" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sergent Major</td>
+                    <td>27 Août 2024</td>
+                    <td>112e</td>
+                    <td>Grenadier</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../imgs/ranks/Sgt.png" alt="Sgt" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Sergent</td>
+                    <td>22 Avril 2024</td>
+                    <td>112e</td>
+                    <td>Grenadier</td>
+                    <td>-</td>
+                </tr>
+                </tbody>
+            </table>
 
             <h3>Duché de Tasher</h3>
             <p>Aenean non sagittis nunc. Ut eget neque ultrices dui pharetra hendrerit eget id dolor. Sed porttitor mauris at velit iaculis ultrices. Vivamus ex leo, rutrum tristique maximus vitae, scelerisque at augue. Ut ipsum neque, blandit vel mauris in, porttitor vulputate lectus. Aliquam ullamcorper ornare nunc vel sodales. Phasellus laoreet, sapien quis efficitur fringilla, magna lorem efficitur sapien, nec auctor ante elit et eros. Vestibulum luctus rhoncus tellus. Vestibulum id finibus erat, at faucibus est. Cras ultrices justo eu elementum iaculis. Nulla pharetra sed velit nec bibendum. Aliquam eleifend lacus at fringilla finibus.</p>
