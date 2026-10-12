@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="files/css_main.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">B</div>
+                <div class="site-title">HOUSE OF THE BEAUHARNAIS</div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav id="nav">
+                <button class="nav-link active" onclick="window.location=''">Home</button>
+                <button class="nav-link" onclick="window.location='family.html'">Family</button>
+                <button class="nav-link" onclick="window.location='members.html'">Cabinet</button>
+                <button class="nav-link" onclick="window.location='wiki.html'">Wiki</button>
+                <button class="nav-link" onclick="window.location='links.html'">Links</button>
+                <button class="nav-link" onclick="window.location='index.html'">FR</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Accueil -->
+        <div id="accueil" class="page active">
+            <div class="hero">
+                <h2>Welcome</h2>
+                <br>
+                <div class="coat-of-arms">
+                    <img src="imgs/blason.png" alt="Blason de Beauharnais">
+                </div>
+            </div>
+            <div class="card">
+                <h3>Une famille d'honneur et de tradition</h3>
+                <p>La Maison Beauharnais est une illustre famille française dont l'histoire s'étend sur plusieurs siècles. Reconnue pour ses contributions remarquables à l'histoire de France, la famille a produit de nombreux membres distingués dans les domaines militaire, politique et diplomatique.</p>
+                <p style="margin-top: 1rem;">Ce site présente l'histoire, les membres notables et les ressources relatives à cette prestigieuse lignée.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-section">
+                <div class="footer-logo">B</div>
+                <div class="footer-title">House of the Beauharnais</div>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                    💬 Discord
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 House of the Beauharnais - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../files/js_wiki.js"></script>
+
+</body>
+</html>

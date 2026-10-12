@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="../imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="../files/css_main.css">
+</head>
+<body>
+<header id="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">B</div>
+            <div class="site-title">HOUSE OF THE BEAUHARNAIS</div>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="nav">
+            <button class="nav-link" onclick="window.location='../en.html'">Home</button>
+            <button class="nav-link" onclick="window.location='family.html'">Family</button>
+            <button class="nav-link" onclick="window.location='members.html'">Cabinet</button>
+            <button class="nav-link" onclick="window.location='wiki.html'">Wiki</button>
+            <button class="nav-link active" onclick="window.location=''">Links</button>
+            <button class="nav-link" onclick="window.location='../links.html'">FR</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Page Liens -->
+    <div id="liens" class="page active">
+        <div class="card">
+            <h2>Links and Ressources</h2>
+            <p>Rejoignez la communauté de la Maison Beauharnais sur nos différentes plateformes.</p>
+
+            <div class="link-grid">
+                <div class="link-card" onclick="openLink('discord')">
+                    <h3>💬 Discord</h3>
+                    <p>Community Server/p>
+                </div>
+
+                <div class="link-card" onclick="openLink('roblox')">
+                    <h3>🎮 Roblox</h3>
+                    <p>Official Group</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1rem; background: #f5f9f5; border-radius: 5px;">
+                <p style="font-size: 0.9rem; color: #5a8a5a;"><strong>Note :</strong> Click on a card to be redirected.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-section">
+            <div class="footer-logo">B</div>
+            <div class="footer-title">House of the Beauharnais</div>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                💬 Discord
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 House of the Beauharnais - All right reserved</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../files/js_wiki.js"></script>
+
+</body>
+</html>
