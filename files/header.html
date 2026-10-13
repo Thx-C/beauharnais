@@ -1,0 +1,50 @@
+<!-- Header for the site -->
+<div class="header-content">
+    <a class="logo-section" href="https://beauharnais.fr">
+        <div class="logo"><img src="imgs/logo.png" alt="Blason de la Famille"></div>
+        <div class="site-title">MAISON BEAUHARNAIS</div>
+    </a>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+        <!-- Plus de "active" en dur : le script s'en charge -->
+        <button class="nav-link" onclick="window.location='https://beauharnais.fr'">Accueil</button>
+        <button class="nav-link" onclick="window.location='/family.html'">Famille</button>
+        <button class="nav-link" onclick="window.location='/members.html'">Cabinet</button>
+        <button class="nav-link" onclick="window.location=''">Wiki</button>
+        <button class="nav-link" onclick="window.location='/links.html'">Liens</button>
+        <button class="nav-link" onclick="window.location='/en.html'">EN</button>
+    </nav>
+</div>
+
+<script>
+    // Met la classe "active" sur le bouton de la page actuelle
+    function setActiveNav() {
+        // Normalise un chemin : enlève "index.html", ".html" et le "/" final
+        function clean(path) {
+            return path.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+        }
+
+        var current = clean(window.location.pathname);
+
+        document.querySelectorAll('#nav .nav-link').forEach(function (btn) {
+            // Récupère l'URL dans le onclick
+            var match = (btn.getAttribute('onclick') || '').match(/'([^']+)'/);
+            if (!match) return;
+
+            var target = new URL(match[1], window.location.origin);
+
+            // Ignore les liens vers un autre domaine (ex: Retour Site)
+            if (target.origin !== window.location.origin) return;
+
+            // Active uniquement le bouton correspondant
+            btn.classList.toggle('active', clean(target.pathname) === current);
+        });
+    }
+
+    // Lance tout de suite si la page est déjà chargée, sinon attend
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setActiveNav);
+    } else {
+        setActiveNav();
+    }
+</script>
