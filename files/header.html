@@ -1,16 +1,16 @@
 <!-- Header for the site -->
 <div class="header-content">
-    <a class="logo-section" href="https://beauharnais.fr">
-        <div class="logo"><img src="/imgs/logo.png" alt="Blason de la Famille"></div>
+    <a class="logo-section" href="/">
+        <div class="logo"><img src="/imgs/logo.png" alt="Blason de la Famille" width="50" height="50"></div>
         <div class="site-title">MAISON BEAUHARNAIS</div>
     </a>
     <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     <nav id="nav">
         <!-- Plus de "active" en dur : le script s'en charge -->
-        <button class="nav-link" onclick="window.location='https://beauharnais.fr'">Accueil</button>
+        <button class="nav-link" onclick="window.location='/'">Accueil</button>
         <button class="nav-link" onclick="window.location='/family.html'">Famille</button>
         <button class="nav-link" onclick="window.location='/members.html'">Cabinet</button>
-        <button class="nav-link" onclick="window.location=''">Wiki</button>
+        <button class="nav-link" onclick="window.location='/wiki.html'">Wiki</button>
         <button class="nav-link" onclick="window.location='/links.html'">Liens</button>
         <button class="nav-link" onclick="window.location='/en.html'">EN</button>
     </nav>
@@ -33,11 +33,15 @@
 
             var target = new URL(match[1], window.location.origin);
 
-            // Ignore les liens vers un autre domaine (ex: Retour Site)
+            // Ignore les liens vers un autre domaine
             if (target.origin !== window.location.origin) return;
 
-            // Active uniquement le bouton correspondant
-            btn.classList.toggle('active', clean(target.pathname) === current);
+            var t = clean(target.pathname);
+            var isActive = (t === '/')
+                ? current === '/'                                   // Accueil : exact seulement
+                : (current === t || current.startsWith(t + '/'));   // sections : inclut les sous-pages
+
+            btn.classList.toggle('active', isActive);
         });
     }
 
