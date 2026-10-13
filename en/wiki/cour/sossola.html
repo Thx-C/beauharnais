@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki | House of the Beauharnais</title>
+    <link rel="icon" href="../../imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="../../files/css_main.css">
+    <link rel="stylesheet" href="../../files/css_wiki-home.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">B</div>
+            <div class="site-title">MAISON BEAUHARNAIS</div>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="nav">
+            <button class="nav-link" onclick="window.location='../../index.html'; showPage('accueil')">Accueil</button>
+            <button class="nav-link" onclick="window.location='../../family.html'">Famille</button>
+            <button class="nav-link" onclick="window.location='../../members.html'">Cabinet</button>
+            <button class="nav-link active" onclick="window.location='home.html'">Wiki</button>
+            <button class="nav-link" onclick="window.location='../../links.html'">Liens</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Page Wiki -->
+    <div id="wiki" class="page active">
+        <div class="card">
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;border-bottom: 2px solid #a8d5a8;margin-bottom: 1.5rem">
+                <h2 style="flex: 0 0 auto;border-bottom: none;margin-bottom:0px">Sossola De Beauharnais</h2>
+                <img src="../../imgs/logos/Tasher.png" alt="Tasher" style="height: 2rem; width: auto; margin-top: 0.1rem;" onclick="openModal(this.src)">
+            </div>
+            <p><em>Compte de Tascher</em><p>
+
+            <h3>Titres</h3>
+            <p>Nunc venenatis mauris posuere dapibus gravida. Sed tempus auctor tincidunt. Morbi rhoncus, sem malesuada volutpat lacinia, justo nisl gravida nisl, sed lobortis nibh lorem vel augue. Phasellus blandit leo nec ante viverra euismod. Aenean tortor lorem, dignissim ut pharetra vel, aliquet eget ligula. Fusce sed risus erat. Donec non varius lectus. Vivamus eu nisl in lectus congue efficitur. Proin id est pulvinar, imperdiet lectus sed, placerat elit. Pellentesque ornare purus vitae venenatis consequat. Phasellus imperdiet odio enim, et fermentum urna iaculis sit amet. Cras gravida ultrices felis et scelerisque. Ut vulputate, enim at laoreet accumsan, arcu nisi scelerisque urna, pulvinar laoreet tellus purus sollicitudin purus. Integer sagittis cursus odio et imperdiet. Nam justo nibh, vehicula consectetur dignissim ac, laoreet ut augue. Nullam urna lectus, egestas id rhoncus in, tempus ac orci.</p>
+
+            <h3>Biographie</h3>
+            <p>Aenean non sagittis nunc. Ut eget neque ultrices dui pharetra hendrerit eget id dolor. Sed porttitor mauris at velit iaculis ultrices. Vivamus ex leo, rutrum tristique maximus vitae, scelerisque at augue. Ut ipsum neque, blandit vel mauris in, porttitor vulputate lectus. Aliquam ullamcorper ornare nunc vel sodales. Phasellus laoreet, sapien quis efficitur fringilla, magna lorem efficitur sapien, nec auctor ante elit et eros. Vestibulum luctus rhoncus tellus. Vestibulum id finibus erat, at faucibus est. Cras ultrices justo eu elementum iaculis. Nulla pharetra sed velit nec bibendum. Aliquam eleifend lacus at fringilla finibus.</p>
+
+
+            <h3>Décorations</h3>
+            <p>Ici, vous trouverez toutes les distinctions reçu par Bastien au long de sa carrière sur NW.</p>
+            <br>
+
+            <div id="imageModal" class="modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modalImage" alt="Médaille en grand">
+            </div>
+
+
+            <h4>France</h4>
+
+            <table class="decorations-table">
+                <thead>
+                <tr>
+                    <th>Médaille</th>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Recrutement-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite Recrutement, Bronze</td>
+                    <td>23 Mars 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Initiative-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du mérite Initiatif, d'Argent</td>
+                    <td>Argent - 20 Avril 2025
+                    <br>Bronze - 12 Janvier 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Benevole-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Pendantif Bénévole, d'Argent</td>
+                    <td>Argent - 20 Avril 2025
+                    <br>Bronze - 12 Janvier 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Sociaux-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille du Mérite Social</td>
+                    <td>23 Mars 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Athenmatique-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Légionnaire de l'ordre de l'Athenmatique</td>
+                    <td>20 Avril 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Italie-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille de la Campagne d'Italie, de Bronze</td>
+                    <td>Mai 2025</td>
+                </tr>
+                <tr>
+                    <td class="medal-cell"><img src="../../imgs/medals/Borodino-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td>Médaille de la Campagne d'Allemagne, de Bronze</td>
+                    <td>Septembre 2025</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h3>La Goon Squad</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique lacus id pretium. Nunc lacinia dui vel pellentesque cursus. Nulla fringilla dignissim vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas venenatis nibh justo, in mattis ligula pharetra feugiat. Ut sollicitudin dui eu augue posuere, a vestibulum mauris scelerisque. Nulla dictum tempor imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dui sem, luctus eget nisl nec, condimentum tincidunt tortor. In hac habitasse platea dictumst. Integer non leo eleifend odio iaculis ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus gravida condimentum tellus quis laoreet. Duis posuere sit amet enim ac scelerisque.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-section">
+            <div class="footer-logo">B</div>
+            <div class="footer-title">Maison Beauharnais</div>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('discord'); return false;">
+                💬 Discord
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Maison Beauharnais - Tous droits réservés</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../../files/js_wiki.js"></script>
+
+</body>
+</html>
