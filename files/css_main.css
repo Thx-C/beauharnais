@@ -156,6 +156,17 @@ nav {
     height: auto;
 }
 
+.wiki-picture {
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.wiki-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
 .card {
     background: white;
     padding: 1rem;

@@ -4,28 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>RedyDeBeauharnais | Wiki | House of the Beauharnais</title>
-    <link rel="icon" href="../imgs/logo.png" type="png"/>
-    <link rel="stylesheet" href="../files/css_main.css">
-    <link rel="stylesheet" href="../files/css_wiki-home.css">
+    <link rel="icon" href="/imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="/files/css_main.css">
+    <link rel="stylesheet" href="/files/css_wiki-home.css">
 </head>
 <body> 
   
-   <header id="header">
-        <div class="header-content">
-            <div class="logo-section">
-                <div class="logo">B</div>
-                <div class="site-title">MAISON BEAUHARNAIS</div>
-            </div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <nav id="nav">
-                <button class="nav-link" onclick="window.location='../index.html'; showPage('accueil')">Accueil</button>
-                <button class="nav-link" onclick="window.location='../family.html'">Famille</button>
-                <button class="nav-link" onclick="window.location='../members.html'">Cabinet</button>
-                <button class="nav-link active" onclick="window.location='home.html'">Wiki</button>
-                <button class="nav-link" onclick="window.location='../links.html'">Liens</button>
-            </nav>
-        </div>
-    </header>
+<header id="header"></header>
 
 <div class="container">
     <!-- Page Wiki -->
@@ -33,7 +18,8 @@
             <div class="card">
                 <div style="display: flex; align-items: flex-start; gap: 0.5rem;border-bottom: 2px solid #a8d5a8;margin-bottom: 1.5rem">
                     <h2 style="flex: 0 0 auto;border-bottom: none;margin-bottom:0px">Redy De Beauharnais</h2>
-                    <img src="../imgs/logo.png" alt="Navarres" style="height: 2rem; width: auto; margin-top: 0rem;" onclick="openModal(this.src)">
+                    <!-- <img src="../imgs/logos/Archiduc.png" alt="Archiduc" style="height: 2rem; width: auto; margin-top: 0rem;" onclick="openModal(this.src)"> -->
+                    <img src="/imgs/logo.png" alt="Navarres" style="height: 2rem; width: auto; margin-top: 0rem;" onclick="openModal(this.src)">
                 </div>
                 <p><em>Archiduc des Beauharnais, Duc de Navarres & Intendant pour le Prince - Chevalier d'Empire</em>
                 <br>
@@ -41,7 +27,7 @@
                 <br>C'est d'ailleurs lui qui paye, créer et maintiens le site web et le serveur Minecraft.
                 <br>
                 <br>Il est aussi connu en tant que redy2500 sur la plupart des plateformes, RedyDeBeauharnais sur Roblox où encore RedFire2500 à l'origine.<p>
-				
+
                 <h3>Titres</h3>
                 <p>Archiduc des Beauharnais
                 <br>Duc de Navarres
@@ -50,6 +36,10 @@
                 
                 <h3>Biographie</h3>
                 <p>Aenean non sagittis nunc. Ut eget neque ultrices dui pharetra hendrerit eget id dolor. Sed porttitor mauris at velit iaculis ultrices. Vivamus ex leo, rutrum tristique maximus vitae, scelerisque at augue. Ut ipsum neque, blandit vel mauris in, porttitor vulputate lectus. Aliquam ullamcorper ornare nunc vel sodales. Phasellus laoreet, sapien quis efficitur fringilla, magna lorem efficitur sapien, nec auctor ante elit et eros. Vestibulum luctus rhoncus tellus. Vestibulum id finibus erat, at faucibus est. Cras ultrices justo eu elementum iaculis. Nulla pharetra sed velit nec bibendum. Aliquam eleifend lacus at fringilla finibus.</p>
+
+                <div class="wiki-picture">
+                    <img src="/imgs/redycannon.png" alt="Redy De Beauharnais" onclick="openModal(this.src)">
+                </div>
 
                 <h3>Décorations</h3>
                 <p>Ici, vous trouverez toutes les distinctions reçu par Redy tout au long de sa carrière sur NW.</p>
@@ -73,22 +63,22 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="medal-cell"><img src="../../imgs/medals/EF-Chevalier.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td class="medal-cell"><img src="/imgs/medals/EF-Chevalier.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
                     <td>Chevalier d'Empire</td>
                     <td>22 Septembre 2025</td>
                 </tr>
                 <tr>
-                    <td class="medal-cell"><img src="../../imgs/medals/Ldh-Chevalier.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td class="medal-cell"><img src="/imgs/medals/Ldh-Chevalier.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
                     <td>Légionnaire de la Légion d'Honneur</td>
                     <td>Chevalier - </td>
                 </tr>
                 <tr>
-                    <td class="medal-cell"><img src="../../imgs/medals/OdF-Legionnaire.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td class="medal-cell"><img src="/imgs/medals/OdF-Legionnaire.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
                     <td>Légionnaire de l'Ordre de la Fidèle</td>
                     <td>04 Février 2025</td>
                 </tr>
                 <tr>
-                    <td class="medal-cell"><img src="../imgs/medals/Athenmatique-Officer.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td class="medal-cell"><img src="/imgs/medals/Athenmatique-Officer.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
                     <td>Officier de l'ordre de l'Athenmatique</td>
                     <td>Officier - 22 Novembre 2025
                     <br>Légionnaire - 20 Avril 2025</td>
@@ -103,40 +93,40 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Militaire-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Militaire-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Médaille du Mérite militaire, d'Argent</td>
 					<td>Argent - Juillet 2026
                     <br>Bronze - 17 Février 2025</td>
 				</tr>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Benevole-Or.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Benevole-Or.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Pendantif Bénévole, d'Or</td>
 					<td>Or - 26 Octobre 2025
 					<br>Argent - 20 Avril 2025
 					<br>Bronze - 23 Mars 2025</td>
 				</tr>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Italie-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Italie-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Médaille de la Campagne d'Italie, de Bronze</td>
 					<td>Mai 2025</td>
 				</tr>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Initiative-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Initiative-Argent.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Médaille du mérite Initiatif, d'Argent</td>
 					<td>12 Juillet 2025</td>
 				</tr>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Borodino-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Borodino-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Médaille de la Campagne d'Allemagne, de Bronze</td>
 					<td>Septembre 2025</td>
 				</tr>
                 <tr>
-                    <td class="medal-cell"><img src="../imgs/medals/Bataille-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td class="medal-cell"><img src="/imgs/medals/Bataille-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
                     <td>Croix de Bataille, de Bronze</td>
                     <td>Septembre 2026</td>
                 </tr>
                 <tr>
-                    <td class="medal-cell"><img src="../imgs/medals/Espagne-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+                    <td class="medal-cell"><img src="/imgs/medals/Espagne-Bronze.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
                     <td>Médaille de la Campagne d'Espagne, de Bronze</td>
                     <td>Septembre 2026</td>
                 </tr>
@@ -155,19 +145,19 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Holland-Silver.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Holland-Silver.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Holländsche Dienstmedaille
 					<br><em>Dutch Service Medal</em></td>
 					<td>2023</td>
 				</tr>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Social-Silver.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Social-Silver.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Gesellschafts Verdienstmedaille
 					<br><em>Social Medal</em></td>
 					<td>18 Mars 2024</td>
 				</tr>
 				<tr>
-					<td class="medal-cell"><img src="../imgs/medals/Bavaria-Silver.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
+					<td class="medal-cell"><img src="/imgs/medals/Bavaria-Silver.png" alt="Médaille" class="medal-icon" onclick="openModal(this.src)"></td>
 					<td>Bairische Dienstmedaille, Silber
                     <br><em>Bavarian Campaign Medal</em></td>
 					<td>Mai 2024</td>
@@ -192,21 +182,21 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Lt.png" alt="Lt" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Lt.png" alt="Lt" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Lieutenant</td>
                         <td>Juillet 2026</td>
                         <td>Etat Major Général du Quatrième Corps</td>
                         <td>Aide de Camp - Été 2026 à nos jours
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/S-Lt.png" alt="S-Lt" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/S-Lt.png" alt="S-Lt" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Sous-Lieutenant</td>
                         <td>Mai 2026</td>
                         <td>Etat Major Général du Quatrième Corps</td>
                         <td>Aide de Camp - Été 2026 à nos jours
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Adj-S.png" alt="Adj-S" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Adj-S.png" alt="Adj-S" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Adjudant Sous Officier</td>
                         <td>27 Octobre 2025</td>
                         <td>Etat Major</td>
@@ -214,7 +204,7 @@
                         <br><em>Administrateur en Chef</em></td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Adj.png" alt="Adj" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Adj.png" alt="Adj" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Adjudant</td>
                         <td>16 Juin 2025</td>
                         <td>Etat Major
@@ -225,56 +215,56 @@
                         <br>Etat Major, Commandant du Bataillon de Fusiliers</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Sgt-M.png" alt="Sgt-M" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Sgt-M.png" alt="Sgt-M" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Sergent Major</td>
                         <td>21 Avril 2025</td>
                         <td>Fusiliers</td>
                         <td>Etat Major, Commandant du Bataillon de Fusiliers</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Sgt.png" alt="Sgt" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Sgt.png" alt="Sgt" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Sergent</td>
                         <td>23 Mars 2025</td>
                         <td>Etat Major</td>
                         <td>Etat Major, Adjudant Officier</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Cpl-F.png" alt="Cpl-F" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Cpl-F.png" alt="Cpl-F" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Caporal Fourrier</td>
                         <td>10 Mars 2025</td>
                         <td>Fusiliers</td>
                         <td>NCO des Dépôts</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Cpl-P.png" alt="Cpl-P" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Cpl-P.png" alt="Cpl-P" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Caporal de Premier</td>
                         <td>3 Mars 2025</td>
                         <td>Fusiliers</td>
                         <td>NCO des Dépôts</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Cpl.png" alt="Cpl" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Cpl.png" alt="Cpl" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Caporal</td>
                         <td>24 Février 2025</td>
                         <td>Fusiliers</td>
                         <td>NCO Premier Dépôt</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Sdt-P.png" alt="Sdt-P" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Sdt-P.png" alt="Sdt-P" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Soldat de Premier</td>
                         <td>3 Février 2025</td>
                         <td>Fusiliers</td>
                         <td>Fourrier Premier Dépôt</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Sdt.png" alt="Sdt" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Sdt.png" alt="Sdt" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Soldat</td>
                         <td>20 janvier 2025</td>
                         <td>Fusiliers</td>
                         <td>Fourrier Premier Dépôt</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Cst.png" alt="Cst" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Cst.png" alt="Cst" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Conscrit</td>
                         <td>1er Septembre 2024
                         <br>2022</td>
@@ -299,21 +289,21 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/V-Fdw.png" alt="V-Fdw" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/V-Fdw.png" alt="V-Fdw" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Vize-Feldwebel</td>
                         <td>26 Novembre 2024</td>
                         <td>Fusiliers</td>
                         <td>Staff Social Dep</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/V-Fdw.png" alt="Kpl" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/V-Fdw.png" alt="Kpl" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Korporal</td>
                         <td>22 Avril 2024</td>
                         <td>Grenadiers</td>
                         <td>NCO</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Gef.png" alt="Vzk" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Gef.png" alt="Vzk" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Vize-Korporal</td>
                         <td>10 Avril 2024</td>
                         <td>Schutzen</td>
@@ -321,28 +311,28 @@
                         <br>Ranker</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Gef.png" alt="Fors" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Gef.png" alt="Fors" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Fourierschütz</td>
                         <td>18 Mars 2024</td>
                         <td>Schutzen</td>
                         <td>Ranker</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Gef.png" alt="Gef" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Gef.png" alt="Gef" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Gefreiter</td>
                         <td>11 Mars 2024</td>
                         <td>Schutzen</td>
                         <td>Ranker</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Ldw.png" alt="Gmr" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Ldw.png" alt="Gmr" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Gemeiner</td>
                         <td>5 Mars 2024</td>
                         <td>Fusiliers</td>
                         <td>Ranker</td>
                     </tr>
                     <tr>
-                        <td class="medal-cell"><img src="../imgs/ranks/Ldw.png" alt="Ldw" class="medal-icon" onclick="openModal(this.src)"></td>
+                        <td class="medal-cell"><img src="/imgs/ranks/Ldw.png" alt="Ldw" class="medal-icon" onclick="openModal(this.src)"></td>
                         <td>Landwehr</td>
                         <td>2023</td>
                         <td>Fusiliers</td>
@@ -409,7 +399,7 @@
            });
    </script>
 
-    <script type="text/javascript" src="../files/js_wiki.js"></script>
+    <script type="text/javascript" src="/files/js_wiki.js"></script>
 	
 </body> 
 </html>
