@@ -45,18 +45,14 @@ header.hidden {
 .logo {
     width: 50px;
     height: 50px;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* garde les proportions */
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .logo-section {
@@ -158,6 +154,17 @@ nav {
 .coat-of-arms img {
     width: 100%;
     height: auto;
+}
+
+.wiki-picture {
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.wiki-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
 }
 
 .card {

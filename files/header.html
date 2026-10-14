@@ -1,22 +1,47 @@
 <!-- Header for the site -->
 <div class="header-content">
-    <a class="logo-section" href="https://beauharnais.fr">
-        <div class="logo"><img src="/imgs/logo.png" alt="Blason de la Famille"></div>
+    <a class="logo-section" href="/">
+        <div class="logo"><img src="/imgs/logo.png" alt="Blason de la Famille" width="50" height="50"></div>
         <div class="site-title">MAISON BEAUHARNAIS</div>
     </a>
     <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     <nav id="nav">
         <!-- Plus de "active" en dur : le script s'en charge -->
-        <button class="nav-link" onclick="window.location='https://beauharnais.fr'">Accueil</button>
+        <button class="nav-link" onclick="window.location='/'">Accueil</button>
         <button class="nav-link" onclick="window.location='/family.html'">Famille</button>
         <button class="nav-link" onclick="window.location='/members.html'">Cabinet</button>
-        <button class="nav-link" onclick="window.location=''">Wiki</button>
+        <button class="nav-link" onclick="window.location='/wiki.html'">Wiki</button>
         <button class="nav-link" onclick="window.location='/links.html'">Liens</button>
-        <button class="nav-link" onclick="window.location='/en.html'">EN</button>
+        <button class="nav-link" id="lang-btn" onclick="switchLang()">EN</button>
     </nav>
 </div>
 
 <script>
+    // Vrai si on est dans la version anglaise (/en ou /en/...)
+    function isEnglish() {
+        return /^\/en(\/|$)/.test(window.location.pathname);
+    }
+
+    // Change de langue : ajoute /en/ si on est en FR, l'enlève si on est en EN
+    function switchLang() {
+        var path = window.location.pathname;
+        var newPath;
+
+        if (isEnglish()) {
+            newPath = path.replace(/^\/en/, '') || '/';
+        } else {
+            newPath = '/en' + (path === '/' ? '/' : path);
+        }
+
+        window.location = newPath + window.location.search + window.location.hash;
+    }
+
+    // Le bouton affiche "FR" quand on est en anglais, "EN" sinon
+    function setLangButton() {
+        var btn = document.getElementById('lang-btn');
+        if (btn) btn.textContent = isEnglish() ? 'FR' : 'EN';
+    }
+
     // Met la classe "active" sur le bouton de la page actuelle
     function setActiveNav() {
         // Normalise un chemin : enlève "index.html", ".html" et le "/" final
@@ -24,7 +49,8 @@
             return path.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/+$/, '') || '/';
         }
 
-        var current = clean(window.location.pathname);
+        // On ignore le préfixe /en pour comparer avec les liens du menu
+        var current = clean(window.location.pathname.replace(/^\/en(?=\/|$)/, '') || '/');
 
         document.querySelectorAll('#nav .nav-link').forEach(function (btn) {
             // Récupère l'URL dans le onclick
@@ -33,18 +59,46 @@
 
             var target = new URL(match[1], window.location.origin);
 
-            // Ignore les liens vers un autre domaine (ex: Retour Site)
+            // Ignore les liens vers un autre domaine
             if (target.origin !== window.location.origin) return;
 
-            // Active uniquement le bouton correspondant
-            btn.classList.toggle('active', clean(target.pathname) === current);
+            var t = clean(target.pathname);
+            var isActive = (t === '/')
+                ? current === '/'                                   // Accueil : exact seulement
+                : (current === t || current.startsWith(t + '/'));   // sections : inclut les sous-pages
+
+            btn.classList.toggle('active', isActive);
         });
+    }
+
+    // En version anglaise, les boutons du menu pointent vers /en/...
+    function prefixNavLinks() {
+        if (!isEnglish()) return;
+
+        document.querySelectorAll('#nav .nav-link').forEach(function (btn) {
+            var onclick = btn.getAttribute('onclick') || '';
+            var match = onclick.match(/'([^']+)'/);
+            if (!match) return;
+
+            var url = match[1];
+            // Seulement les liens internes (commençant par "/") pas déjà en /en
+            if (url.charAt(0) !== '/' || /^\/en(\/|$)/.test(url)) return;
+
+            var newUrl = '/en' + url;
+            btn.setAttribute('onclick', "window.location='" + newUrl + "'");
+        });
+    }
+
+    function initHeader() {
+        setLangButton();
+        setActiveNav();    // d'abord, avec les liens d'origine
+        prefixNavLinks();  // ensuite, on ajoute /en/ si besoin
     }
 
     // Lance tout de suite si la page est déjà chargée, sinon attend
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setActiveNav);
+        document.addEventListener('DOMContentLoaded', initHeader);
     } else {
-        setActiveNav();
+        initHeader();
     }
 </script>
