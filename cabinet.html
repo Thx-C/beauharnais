@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Beauharnais</title>
+    <link rel="icon" href="imgs/logo.png" type="png"/>
+    <link rel="stylesheet" href="files/css_main.css">
+    <style>
+        /* Page Cabinet uniquement : l'image reprend le rayon du fond */
+        .member-image { overflow: hidden; }
+        .member-image img { display: block; border-radius: inherit; }
+    </style>
+</head>
+<body>
+<header id="header"></header>
+
+<div class="container">
+    <!-- Page Cabinet -->
+    <div id="membres" class="page active">
+        <div class="card">
+            <h2>Cabinet</h2>
+            <p>Les personnalités éminentes qui forment le cabinet à la tête de la Maison Beauharnais.</p>
+        </div>
+
+        <!-- Section Prince Étienne -->
+        <div class="member-section">
+            <div class="member-header">
+                <div class="member-image"><img src="/imgs/mugshot/Mugshot-Etienne-TopLess.png" alt="Portrait du Prince Étienne de Beauharnais" width="150" height="150" style="object-fit: cover;"></div>
+                <div class="member-info">
+                    <div class="member-title">Prince</div>
+                    <div class="member-name">Étienne de Beauharnais</div>
+                    <div class="member-subtitle">Chef de la Maison Beauharnais</div>
+                </div>
+            </div>
+            <div class="member-content">
+                <p>Le Prince Étienne de Beauharnais incarne les valeurs d'excellence et de tradition qui caractérisent la Maison depuis des générations. À la tête de la famille, il perpétue l'héritage prestigieux de ses ancêtres tout en guidant la famille vers l'avenir.</p>
+                <p><em><a class="liens" href="/wiki/etienne">Page wiki du Prince</a>
+                    <!--Emplacement réservé pour l'image et les détails biographiques de Redy.--></em></p>
+            </div>
+        </div>
+
+        <!-- Section Duc Redy -->
+        <div class="member-section">
+            <div class="member-header">
+                <div class="member-image"><img src="/imgs/mugshot/Mugshot-Redy.png" alt="Portrait de l'Archiduc Redy De Beauharnais" width="150" height="150" style="object-fit: cover;"></div>
+                <div class="member-info">
+                    <div class="member-title">Archiduc</div>
+                    <div class="member-name">Redy De Beauharnais</div>
+                    <div class="member-subtitle">Intendant du Prince</div>
+                </div>
+            </div>
+            <div class="member-content">
+                <p>L'Archiduc Redy De Beauharnais est reconnu pour son dévouement à la préservation du patrimoine familial et son engagement au service de la Maison. Sa sagesse et son expérience font de lui un pilier essentiel de la famille.</p>
+                <p><em><a class="liens" href="/wiki/redy">Page wiki de Redy</a>
+                    <!--Emplacement réservé pour l'image et les détails biographiques de Redy.--></em></p>
+            </div>
+        </div>
+
+        <!-- Section Comte Blue -->
+        <div class="member-section">
+            <div class="member-header">
+                <div class="member-image"><img src="/imgs/mugshot/Mugshot-Blueyes.png" alt="Portrait du Comte Blue De Beauharnais" width="150" height="150" style="object-fit: cover;"></div>
+                <div class="member-info">
+                    <div class="member-title">Comte</div>
+                    <div class="member-name">Blue De Beauharnais</div>
+                    <div class="member-subtitle">Commandant de la Garde</div>
+                </div>
+            </div>
+            <div class="member-content">
+                <p>Le Comte Blue De Beauharnais représente l'avenir de la Maison. Alliant respect des traditions et vision moderne, il incarne la continuité de l'excellence qui caractérise la famille Beauharnais.</p>
+                <p><em><a class="liens" href="/wiki/blueyes">Page wiki de Blueyes</a>
+                    <!--Emplacement réservé pour l'image et les détails biographiques de Blueyes.--></em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer"> </footer>
+
+<script>
+    fetch('/files/header.html')
+        .then(response => response.text())
+        .then(data => {
+            var container = document.getElementById('header');
+            container.innerHTML = data;
+
+            container.querySelectorAll('script').forEach(function (old) {
+                var script = document.createElement('script');
+                script.textContent = old.textContent;
+                old.replaceWith(script);
+            });
+        });
+</script>
+<script>
+    fetch('/files/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            var container = document.getElementById('footer');
+            container.innerHTML = data;
+
+            container.querySelectorAll('script').forEach(function (old) {
+                var script = document.createElement('script');
+                script.textContent = old.textContent;
+                old.replaceWith(script);
+            });
+        });
+</script>
+
+<script type="text/javascript" src="/files/js_wiki.js"></script>
+
+</body>
+</html>

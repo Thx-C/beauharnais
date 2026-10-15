@@ -1,15 +1,37 @@
-<!-- Header for the site -->
+<!-- Footer for the site -->
 <div class="footer-content">
     <a class="footer-logo-section" href="https://beauharnais.fr">
-        <div class="footer-logo"><img src="/imgs/logo.png" alt="Blason de la Famille"></div>
-        <div class="footer-title">Maison Beauharnais</div>
+        <div class="footer-logo"><img src="/imgs/logo.png" alt="Blason de la Famille" data-en="Family Crest"></div>
+        <div class="footer-title" data-en="House of the Beauharnais">Maison Beauharnais</div>
     </a>
     <div class="footer-links">
-        <a href="#" class="footer-link" id="footer-discord-link" onclick="openFooterLink('https://discord.com/invite/fBgqEFQqp9'); return false;">
-            💬 Discord
+        <a href="https://discord.com/invite/fBgqEFQqp9" class="footer-link" id="footer-discord-link" target="_blank" rel="noopener noreferrer">
+            <img src="/imgs/logos/discord-icon.svg" alt="Discord" width="20" height="20" style="vertical-align: middle;"> Discord
         </a>
     </div>
 </div>
 <div class="footer-bottom">
-    <p>&copy; 2026 Maison Beauharnais - Tous droits réservés</p>
+    <p data-en="&copy; 2026 House of the Beauharnais - All rights reserved">&copy; 2026 Maison Beauharnais - Tous droits réservés</p>
 </div>
+
+<script>
+    // Traduit le footer en anglais sur /en et /en/...
+    (function () {
+        function translateFooter() {
+            if (!/^\/en(\/|$)/.test(window.location.pathname)) return;
+
+            document.querySelectorAll('.footer-title[data-en], .footer-bottom p[data-en]').forEach(function (el) {
+                el.innerHTML = el.getAttribute('data-en');
+            });
+
+            var logo = document.querySelector('.footer-logo img[data-en]');
+            if (logo) logo.alt = logo.getAttribute('data-en');
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', translateFooter);
+        } else {
+            translateFooter();
+        }
+    })();
+</script>
